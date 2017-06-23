@@ -37,10 +37,10 @@ describe('ReactComponent', () => {
   });
 
   it('should throw when supplying a ref outside of render method', () => {
-    //var instance = <div ref="badDiv" />;
-    var instance;
+    var instance = <div ref="badDiv" />;
+   
     expect(function() {
-        instance = React.render(<div ref="badDiv" />,scratch)
+        instance = React.render(instance,scratch)
     }).toThrow();
   });
 

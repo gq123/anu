@@ -349,5 +349,11 @@ describe('ReactComponentLifeCycle', () => {
       'inner componentDidUpdate',
       'outer componentDidUpdate',
     ]);
+    log = [];
+    React.unmountComponentAtNode(container);
+    expect(log).toEqual([
+      'outer componentWillUnmount',
+      'inner componentWillUnmount',
+    ]);
   });
 });
